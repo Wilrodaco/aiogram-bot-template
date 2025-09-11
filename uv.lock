@@ -35,7 +35,6 @@ source = { editable = "." }
 dependencies = [
     { name = "aiogram" },
     { name = "aiogram-dialog" },
-    { name = "aiogram-i18n" },
     { name = "asyncpg" },
     { name = "cachetools" },
     { name = "dishka" },
@@ -67,7 +66,6 @@ dev = [
 requires-dist = [
     { name = "aiogram", specifier = ">=3.22.0" },
     { name = "aiogram-dialog", specifier = ">=2.4.0" },
-    { name = "aiogram-i18n", specifier = ">=1.4" },
     { name = "aiosqlite", marker = "extra == 'dev'", specifier = ">=0.21.0" },
     { name = "alembic", marker = "extra == 'dev'", specifier = ">=1.16.5" },
     { name = "asyncpg", specifier = ">=0.30.0" },
@@ -104,19 +102,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/f2/b9/cfadb823578f9aff44f10928f8020dc4abda82078fba62295aae8869e894/aiogram_dialog-2.4.0.tar.gz", hash = "sha256:e8f0a811be3a58d1e48dfb9dd79108fd0e25c8ab7f8067c31c49f2f583ba4ecc", size = 80359, upload-time = "2025-07-08T22:41:41.078Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/50/d0/1c6511eb6840d06efbfba12cf6e59f688f9e314ab90af34027fa8069af75/aiogram_dialog-2.4.0-py3-none-any.whl", hash = "sha256:4e5fd8f7db66b6d252983c4025968b379069f4a2022db60bde36e5b91268b6ad", size = 112911, upload-time = "2025-07-08T22:41:47.61Z" },
-]
-
-[[package]]
-name = "aiogram-i18n"
-version = "1.4"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "aiogram" },
-    { name = "click" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/ed/b4/97191bf90bcd5ee37990a233b0d3d611ea5037dbf768a28c0d196cb32f4f/aiogram_i18n-1.4.tar.gz", hash = "sha256:6e41304a166fe3bccb74f98b00dc4e85fac0cee815ae7f2c85f539e37e65818b", size = 33451, upload-time = "2024-06-04T12:37:21.771Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0f/ba/f978b917b911bc610b8266978b3ab460b882031fc9665e9daff4498650bd/aiogram_i18n-1.4-py3-none-any.whl", hash = "sha256:a1f838cfd6fa9a459d5f4514e9693e4fe75d27a0138686d92880faff11447007", size = 37045, upload-time = "2024-06-04T12:37:20.008Z" },
 ]
 
 [[package]]
