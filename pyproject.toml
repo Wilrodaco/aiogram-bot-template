@@ -32,7 +32,6 @@ classifiers = [
 dependencies = [
     "aiogram>=3.22.0",
     "aiogram-dialog>=2.4.0",
-    "aiogram-i18n>=1.4",
     "asyncpg>=0.30.0",
     "cachetools>=5.5.2",
     "dishka>=1.6.0",
