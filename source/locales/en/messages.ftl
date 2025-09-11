@@ -1,0 +1,14 @@
+greeting = Hello <b>{ $mention }</b>!
+help = I can not help you
+error = Something went wrong. Please try again later
+admin = Hello, admin <b>{ $mention }</b>!
+change_language = Выберите язык / Choose the language
+changed_language = Great, you've changed your language to <b>{ $language }</b>!
+throttling = Please, wait!
+fsm-enter-name = What is your name?
+fsm-enter-age = How old are you?
+fsm-result = Your name is { $name } and you are { $age } years old.
+dialog-welcome = This is a demo dialog
+dialog-next = Next
+dialog-second = This is the second window
+dialog-close = Close
