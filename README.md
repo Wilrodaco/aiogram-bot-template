@@ -343,7 +343,6 @@ cp .env.example .env
 *   [postgresql](https://github.com/postgres/postgres) with [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy) and [asyncpg](https://github.com/MagicStack/asyncpg?tab=readme-ov-file) - Database layer.
 *   [redis](https://redis.io/) - In-memory data store for FSM and caching.
 *   [loguru](https://github.com/Delgan/loguru) - Logging library.
-*   [aiohttp](https://github.com/aio-libs/aiohttp) & [aiofiles](https://github.com/Tinche/aiofiles) - Async HTTP and file utilities.
 *   [cachetools](https://github.com/tkem/cachetools) & [fluentogram](https://github.com/Arustinal/fluentogram) - Caching and localization helpers.
 *   [Ruff](https://github.com/astral-sh/ruff), [Mypy](https://github.com/python/mypy), [Pre-commit](https://github.com/pre-commit/pre-commit), [Isort](https://github.com/pycqa/isort), [Black](https://github.com/psf/black) - Code quality and formatting tools.
 
