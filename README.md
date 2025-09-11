@@ -8,7 +8,7 @@
 <img alt="Static Badge" src="https://img.shields.io/badge/python-v3.12-FBDE02?style=flat&logo=python&logoColor=FBDE02&labelColor=gray">
 <img alt="Static Badge" src="https://img.shields.io/badge/license-MIT-12C4C4?style=flat&logo=gitbook&logoColor=12C4C4">
 <br>
-<img alt="Static Badge" src="https://img.shields.io/badge/Aiogram-v3.20.0-blue?style=flat">
+<img alt="Static Badge" src="https://img.shields.io/badge/Aiogram-v3.22.0-blue?style=flat">
 
 </div>
 
