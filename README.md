@@ -327,7 +327,7 @@ cp .env.example .env
 ⠀
 
 - [x] touch the grass
-- [ ] Alembic
+- [x] Alembic
 - [x] Aiogram-dialog
 - [ ] .github/workflows
 
@@ -336,7 +336,6 @@ cp .env.example .env
 ⠀
 
 *   [aiogram-3x](https://github.com/aiogram/aiogram) - Asynchronous framework for the Telegram Bot API.
-*   [aiogram_i18n](https://github.com/aiogram/i18n) - Internationalization for Telegram bots.
 *   [aiogram-dialog](https://github.com/aiogram/aiogram-dialog) - Dialog manager for building interactive flows.
 *   [dishka](https://github.com/arslnk/dishka) - Dependency injection container.
 *   [fastapi](https://github.com/tiangolo/fastapi) & [uvicorn](https://github.com/encode/uvicorn) - Webhook server stack.
@@ -345,7 +344,7 @@ cp .env.example .env
 *   [redis](https://redis.io/) - In-memory data store for FSM and caching.
 *   [loguru](https://github.com/Delgan/loguru) - Logging library.
 *   [aiohttp](https://github.com/aio-libs/aiohttp) & [aiofiles](https://github.com/Tinche/aiofiles) - Async HTTP and file utilities.
-*   [cachetools](https://github.com/tkem/cachetools) & [fluent-runtime](https://github.com/projectfluent/python-fluent-runtime) - Caching and localization helpers.
+*   [cachetools](https://github.com/tkem/cachetools) & [fluentogram](https://github.com/Arustinal/fluentogram) - Caching and localization helpers.
 *   [Ruff](https://github.com/astral-sh/ruff), [Mypy](https://github.com/python/mypy), [Pre-commit](https://github.com/pre-commit/pre-commit), [Isort](https://github.com/pycqa/isort), [Black](https://github.com/psf/black) - Code quality and formatting tools.
 
 ⠀
