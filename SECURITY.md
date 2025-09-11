@@ -1,1 +1,1 @@
-To report a security vulnerability, send an email to mrcnsoleka.work@gmail.com
+To report a security vulnerability, send an email to mrconsoleka.work@gmail.com
