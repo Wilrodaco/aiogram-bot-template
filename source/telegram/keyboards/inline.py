@@ -1,7 +1,5 @@
 from aiogram.types import InlineKeyboardButton
 from aiogram.types import InlineKeyboardMarkup
-from aiogram_i18n.types import InlineKeyboardButton
-from aiogram_i18n.types import InlineKeyboardMarkup
 
 inline_language_kb = InlineKeyboardMarkup(
     inline_keyboard=[
